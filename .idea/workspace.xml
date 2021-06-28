@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c62fe46a-96a4-4697-ad92-8692272c1a76" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/displays/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/displays/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/displays/gu7000.py" beforeDir="false" afterPath="$PROJECT_DIR$/displays/gu7000.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pages_gu7000.py" beforeDir="false" afterPath="$PROJECT_DIR$/pages_gu7000.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -13,12 +11,12 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="true">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/displays/gu7000.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="405">
-              <caret line="288" column="47" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="47" />
+            <state relative-caret-position="1211">
+              <caret line="349" column="47" selection-start-line="349" selection-start-column="39" selection-end-line="349" selection-end-column="47" />
               <folding>
                 <element signature="e#141#180#0" expanded="true" />
               </folding>
@@ -27,9 +25,47 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/displays/display.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="486">
+              <caret line="1598" column="19" selection-start-line="1598" selection-start-column="12" selection-end-line="1598" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pydPiper.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="478">
+              <caret line="152" column="27" lean-forward="true" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/sources/musicdata.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1267" />
+            <state relative-caret-position="-2892">
+              <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/sources/musicdata_volumio2.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="666">
+              <caret line="118" column="27" lean-forward="true" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pages_gu7000.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="652">
+              <caret line="80" column="80" lean-forward="true" selection-start-line="80" selection-start-column="80" selection-end-line="80" selection-end-column="80" />
+            </state>
           </provider>
         </entry>
       </file>
@@ -54,8 +90,15 @@
       <find>font</find>
       <find>songprogress</find>
       <find>artistsong</find>
-      <find>i2c</find>
       <find>length</find>
+      <find>i2c</find>
+      <find>config</find>
+      <find>conditional</find>
+      <find>outside_conditions</find>
+      <find>{ 'name':'screensaver', 'duration':9999, 'conditional':&quot;db['outside_conditions']=='No data'&quot; }</find>
+      <find>db</find>
+      <find>sequence(</find>
+      <find>musicdata</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -77,14 +120,15 @@
         <option value="/private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper_config.py" />
         <option value="/private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/configure.py" />
         <option value="/private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper.py" />
-        <option value="$PROJECT_DIR$/pages_gu7000.py" />
         <option value="/private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pages_gu7000.py" />
         <option value="/private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/sources/musicdata_volumio2.py" />
+        <option value="$PROJECT_DIR$/pages_gu7000.py" />
+        <option value="$PROJECT_DIR$/pydPiper.py" />
+        <option value="$PROJECT_DIR$/sources/musicdata_volumio2.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="149" />
+  <component name="ProjectFrameBounds">
     <option name="y" value="25" />
     <option name="width" value="2560" />
     <option name="height" value="1415" />
@@ -94,7 +138,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -121,6 +164,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -151,26 +195,21 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624035853515</updated>
-      <workItem from="1624035856568" duration="14013000" />
+      <workItem from="1624035856568" duration="14457000" />
+      <workItem from="1624908376825" duration="3166000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="14013000" />
+    <option name="totallyTimeSpent" value="17623000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="25" width="2560" height="1415" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Favorites" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980143" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25178713" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Docker" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="Version Control" />
-      <window_info anchor="bottom" id="Python Console" />
-      <window_info anchor="bottom" id="Terminal" visible="true" weight="0.32953683" />
-      <window_info anchor="bottom" id="Event Log" side_tool="true" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" />
@@ -178,11 +217,17 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="right" id="SciView" />
-      <window_info anchor="right" id="Database" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.32953683" />
+      <window_info anchor="bottom" id="Python Console" order="12" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Database" order="4" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -269,42 +314,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/displays/__init__.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="13" lean-forward="true" selection-start-line="13" selection-end-line="13" />
-          <folding>
-            <element signature="e#138#152#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="461">
-          <caret line="738" column="56" lean-forward="true" selection-start-line="738" selection-start-column="56" selection-end-line="738" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/configure.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="66" column="92" selection-start-line="66" selection-start-column="92" selection-end-line="66" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/musicdata.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1267" />
-      </provider>
-    </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/test/GU7000.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-349">
-          <caret line="114" lean-forward="true" selection-start-line="114" selection-end-line="114" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/displays/__init__.py" />
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper.py" />
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/configure.py" />
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/test/GU7000.py" />
     <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/displays/gu7000.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -315,30 +328,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper_config.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="540">
-          <caret line="36" lean-forward="true" selection-start-line="36" selection-end-line="36" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sources/musicdata_volumio2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="89" column="37" lean-forward="true" selection-start-line="89" selection-start-column="37" selection-end-line="89" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pages_gu7000.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="658">
-          <caret line="51" column="61" selection-start-line="51" selection-start-column="61" selection-end-line="51" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pydPiper_config.py" />
     <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/pages_gu7000.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="569">
@@ -346,20 +336,59 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/sources/musicdata_volumio2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="96" column="39" lean-forward="true" selection-start-line="96" selection-start-column="39" selection-end-line="96" selection-end-column="39" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file:///private/var/folders/s3/k2kjsz951q5g9rdsrc8yq9x00000gn/T/ch.sudo.cyberduck/38bbc6d4-0700-490b-a071-026606bd9b1d/home/volumio/vfd/pydPiper/pydPiper/sources/musicdata_volumio2.py" />
     <entry file="file://$PROJECT_DIR$/displays/gu7000.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="288" column="47" selection-start-line="288" selection-start-column="39" selection-end-line="288" selection-end-column="47" />
+        <state relative-caret-position="1211">
+          <caret line="349" column="47" selection-start-line="349" selection-start-column="39" selection-end-line="349" selection-end-column="47" />
           <folding>
             <element signature="e#141#180#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pages_gu7000.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="652">
+          <caret line="80" column="80" lean-forward="true" selection-start-line="80" selection-start-column="80" selection-end-line="80" selection-end-column="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pydPiper_config.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="103" selection-start-line="31" selection-start-column="103" selection-end-line="31" selection-end-column="103" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/displays/display.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="486">
+          <caret line="1598" column="19" selection-start-line="1598" selection-start-column="12" selection-end-line="1598" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pydPiper.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="152" column="27" lean-forward="true" selection-start-line="152" selection-start-column="27" selection-end-line="152" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/musicdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2892">
+          <caret line="33" column="16" selection-start-line="33" selection-start-column="16" selection-end-line="33" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sources/musicdata_volumio2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="666">
+          <caret line="118" column="27" lean-forward="true" selection-start-line="118" selection-start-column="27" selection-end-line="118" selection-end-column="27" />
         </state>
       </provider>
     </entry>

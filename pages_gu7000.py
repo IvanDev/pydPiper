@@ -72,15 +72,22 @@ SEQUENCES = [
 		'canvases': [
 			{ 'name':'playing', 'duration':999, 'conditional':'True' }
 		],
-		'conditional': "db['state']=='play'"
+		'conditional': "(dbp['state']=='play' or db['state']=='play') or ( (db['state']=='stop' or db['state']=='pause') and  ((time.time() - db['state_change_time']) < 3) )"
 	},
+	# {
+	# 	'name': 'seqDelayAfterPause',
+	# 	'canvases': [
+	# 		{'name': 'playing', 'duration': 999, 'conditional': 'True'}
+	# 	],
+	# 	'conditional': "db['state']=='stop' or db['state']=='pause'",
+	# 	'minimum':2
+	# },
 	{
 		'name': 'screensaver',
 		'canvases': [
-				{ 'name':'screensaver', 'duration':9999, 'conditional':"not db['outside_conditions']=='No data'" },
-				{ 'name':'screensaver', 'duration':9999, 'conditional':"db['outside_conditions']=='No data'" }
+				{ 'name':'screensaver', 'duration':9999}
 		],
-		'conditional': "db['state']=='stop' or db['state']=='pause'"
+		'conditional': "(db['state']=='stop' or db['state']=='pause') and (dbp['state']=='stop' or dbp['state']=='pause') and ((time.time() - db['state_change_time']) >= 3)"
 	},
 	{
 		'name':'seqVolume',
