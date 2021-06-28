@@ -633,11 +633,12 @@ if __name__ == u'__main__':
     driver = pydPiper_config.DISPLAY_DRIVER
     pagefile = pydPiper_config.PAGEFILE
     services_list.append(pydPiper_config.MUSIC_SERVICE)
-
+    serial_port = pydPiper_config.DISPLAY_SERIAL_PORT
+    serial_baudrate = pydPiper_config.DISPLAY_SERIAL_BAUDRATE
 
     for opt, arg in opts:
         if opt == u'-h':
-            print u'pydPiper.py -d <driver> --devicetype <devicetype e.g. ssd1306, sh1106> --width <width in pixels> --height <height in pixels> --rs <rs> --e <e> --d4 <d4> --d5 <d5> --d6 <d6> --d7 <d7> --i2caddress <i2c address> --i2cport <i2c port> --enable <enable duration> --wapi <weather underground api key> --wlocale <weather location> --timezone <timezone> --temperature <fahrenheit or celsius> --mpd --spop --lms --rune --volumio --pages <pagefile> --lmsplayer <mac address of lms player> --showupdates'
+            print u'pydPiper.py -d <driver> --devicetype <devicetype e.g. ssd1306, sh1106> --width <width in pixels> --height <height in pixels> --rs <rs> --e <e> --d4 <d4> --d5 <d5> --d6 <d6> --d7 <d7> --i2caddress <i2c address> --i2cport <i2c port> --enable <enable duration> --wapi <weather underground api key> --wlocale <weather location> --timezone <timezone> --temperature <fahrenheit or celsius> --mpd --spop --lms --rune --volumio --pages <pagefile> --lmsplayer <mac address of lms player> --showupdates --baudrate <serial baudrate> --serial_port <serial port>'
             sys.exit()
         elif opt in (u"-d", u"--driver"):
             driver = arg
@@ -698,7 +699,10 @@ if __name__ == u'__main__':
             # except IOError:
             #     # Page file not found
             #     print u"Page file {0} not found.  Using default pages".format(arg)
-
+        elif opt in (u"--serial_port"):
+            serial_port = arg
+        elif opt in (u"--baudrate"):
+            serial_baudrate = arg
         elif opt in (u"--showupdates"):
             showupdates = True
 
@@ -745,6 +749,8 @@ if __name__ == u'__main__':
         lcd = displays.luma_i2c.luma_i2c(rows, cols, i2c_address, i2c_port, devicetype)
     elif driver == u"lcd_curses":
         lcd = displays.lcd_curses.lcd_curses(rows, cols)
+    elif driver == u"gu7000":
+        lcd = displays.gu7000.gu7000(rows, cols, serial_port, serial_baudrate)
     else:
         logging.critical(u"No valid display found")
         sys.exit()

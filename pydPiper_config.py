@@ -32,6 +32,8 @@ i2c_address = safeget(config,'DISPLAY', 'display_i2c_address','0')
 DISPLAY_I2C_ADDRESS = int(i2c_address) if i2c_address and 'x' not in i2c_address else int(i2c_address,16)
 DISPLAY_I2C_PORT = int(safeget(config,'DISPLAY', 'display_i2c_port',0))
 DISPLAY_ENABLE_DURATION = float(safeget(config,'DISPLAY', 'display_enable_duration',0)) # in microseconds.  Decrease to increase performance.  Increase to improve display stability
+DISPLAY_SERIAL_BAUDRATE = int(safeget(config,'DISPLAY','display_baudrate', 115200))
+DISPLAY_SERIAL_PORT = safeget(config,'DISPLAY', 'display_serial_port', '/dev/ttyAMA0')
 
 # Page Parameters
 PAGEFILE = safeget(config, 'DISPLAY', 'pagefile')

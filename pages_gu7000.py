@@ -31,12 +31,13 @@ WIDGETS = {
 	'volumelarge': { 'type':'text', 'format':'Volume: {0}', 'variables':['volume'], 'font':'large', 'just':'left', 'varwidth':True },
 	'volumebar': { 'type':'progressbar', 'value':'volume', 'rangeval':(0,100), 'size':(115,8) },
 	'artist': { 'type':'text', 'format':'{0}', 'variables':['artist'], 'font':'large','varwidth':True,'effect':('scroll','left',1,1,20,'onloop',3,125)},
+	'artistsong': { 'type':'text', 'format':'{0} - {1}', 'variables':['artist','title'], 'font':'large','varwidth':True,'effect':('scroll','left',1,1,20,'onloop',3,125)},
 	'title': { 'type':'text', 'format':'{0}', 'variables':['title'], 'font':'small','varwidth':True,'effect':('scroll','left',1,1,20,'onloop',3,125)},
 	'samplerate': { 'type':'text', 'format':'{0}', 'variables':['samplerate'], 'font':'small', 'just':'center','varwidth':True},
 	'bitdepth': { 'type':'text', 'format':'{0}', 'variables':['bitdepth'], 'font':'small', 'just':'center','varwidth':True},
-	'elapsed': { 'type':'text', 'format':'{0}', 'variables':['elapsed|strftime+%-M:%S'], 'font':'small','size':(30,8), 'varwidth':True},
-	'length': { 'type':'text', 'format':'{0}', 'variables':['length|strftime+%-M:%S'], 'font':'small','size':(30,8),'just':'right','varwidth':True},
-	'songprogress': { 'type':'progressbar', 'value':'elapsed', 'rangeval':(0,'length'), 'size':(62,8) },
+	'elapsed': { 'type':'text', 'format':'{0}', 'variables':['elapsed|strftime+%-M:%S'], 'font':'small', 'just':'left', 'size':(30,8), 'varwidth':False},
+	'length': { 'type':'text', 'format':'{0}', 'variables':['length|strftime+%-M:%S'], 'font':'small','size':(30,8),'just':'right','varwidth':False},
+	'songprogress': { 'type':'progressbar', 'value':'elapsed', 'rangeval':(0,'length'), 'size':(80,7) },
 	'time': { 'type':'text', 'format':'{0}', 'variables':['utc|timezone+US/Eastern|strftime+%-I:%M'], 'font':'large', 'just':'right', 'varwidth':True, 'size':(45,16) },
 	'ttime': { 'type':'ttext', 'format':'{0}', 'variables':['utc|timezone+US/Eastern|strftime+%-I:%M'], 'font':'DejaVuSans28', 'just':'right', 'varwidth':True },
 	'ampm': { 'type':'text', 'format':'{0}', 'variables':['utc|timezone+US/Eastern|strftime+%p'], 'font':'tiny', 'varwidth':True },
@@ -48,10 +49,13 @@ WIDGETS = {
 
 # Assemble the widgets into canvases.  Only needed if you need to combine multiple widgets together so you can produce effects on them as a group.
 CANVASES = {
-	'playing': { 'widgets': [ ('xofy',3,0), ('volume',68,0), ('artist',3,10), ('title',3,26), ('bitdepth',22,45), ('samplerate',78,45), ('elapsed',3,56), ('length',98,56), ('songprogress',33,56) ], 'size':(128,64) },
-	'stoptime': { 'widgets': [ ('ttime',10,2) ], 'size':(128,64) },
-	'stoptimetemp_popup': { 'widgets': [ ('ttime',3,0), ('tempsmall',100,0), ('weather',8,47), ('temphilow',100,48) ], 'size':(128,64) },
-	'volume_changed': { 'widgets': [ ('volumelarge',8,0), ('volumebar',8,18) ], 'size':(128,64) }
+	'playing': { 'widgets': [ ('xofy',0,0), ('volume',80,0),
+							  ('artistsong',0,10),
+							  ('elapsed',0,24), ('songprogress',30,25), ('length',110,24) ], 'size':(140,32) },
+	'stoptime': { 'widgets': [ ('ttime',10,2) ], 'size':(140,32) },
+	'stoptimetemp_popup': { 'widgets': [ ('ttime',3,0), ('tempsmall',100,0), ('weather',8,47), ('temphilow',100,48) ], 'size':(140,32) },
+	'screensaver': { 'widgets': [], 'size':(140,32) },
+	'volume_changed': { 'widgets': [ ('volumelarge',8,0), ('volumebar',8,18) ], 'size':(140,32) }
 }
 
 # Place the canvases into sequences to display when their condition is met
@@ -70,14 +74,14 @@ SEQUENCES = [
 		],
 		'conditional': "db['state']=='play'"
 	},
-        {
-                'name': 'seqStop',
-                'canvases': [
-                        { 'name':'stoptimetemp_popup', 'duration':9999, 'conditional':"not db['outside_conditions']=='No data'" },
-                        { 'name':'stoptime', 'duration':9999, 'conditional':"db['outside_conditions']=='No data'" }
-                ],
-                'conditional': "db['state']=='stop' or db['state']=='pause'"
-        },
+	{
+		'name': 'screensaver',
+		'canvases': [
+				{ 'name':'screensaver', 'duration':9999, 'conditional':"not db['outside_conditions']=='No data'" },
+				{ 'name':'screensaver', 'duration':9999, 'conditional':"db['outside_conditions']=='No data'" }
+		],
+		'conditional': "db['state']=='stop' or db['state']=='pause'"
+	},
 	{
 		'name':'seqVolume',
 		'coordinates':(0,0),

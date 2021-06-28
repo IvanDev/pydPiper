@@ -98,6 +98,8 @@ class musicdata_volumio2(musicdata.musicdata):
 		# Read musicplayer status and update musicdata
 
 		status = args[0]
+		if status.get(u'status') is None:
+			return
 
 		with self.musicdata_lock:
 			state = status.get(u'status').lower()
