@@ -155,6 +155,7 @@ class music_controller(threading.Thread):
 
         # Inform the system that we are starting up
         with self.musicdata_lock:
+            self.musicdata[u'time_since_last_state_change'] = 0
             self.musicdata_prev[u'state'] = ''
             self.musicdata[u'state'] = 'starting'
         self.starttime = time.time()
@@ -244,6 +245,13 @@ class music_controller(threading.Thread):
                 self.musicdata[u'current_time'] = current_time
                 self.musicdata[u'current_time_sec'] = current_time
 
+                if self.musicdata[u'state'] != self.musicdata_prev[u'state'] or u'_state_change_time' not in self.musicdata_prev:
+                    if u'_state_change_time' not in self.musicdata_prev or self.musicdata_prev[u'_state_change_time'] is None:
+                        self.musicdata[u'_state_change_time'] = 0
+                    else:
+                        self.musicdata[u'_state_change_time'] = time.time()
+
+                self.musicdata[u'time_since_last_state_change'] = time.time() - self.musicdata[u'_state_change_time']
 
             # If anything has changed, update pages ### probably unnecessary to check this now that time is being updated in this section
             if self.musicdata != self.musicdata_prev or lastupdate < time.time():

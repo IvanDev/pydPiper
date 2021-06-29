@@ -44,7 +44,9 @@ WIDGETS = {
 	'tempsmall': { 'type':'text', 'format':'{0}', 'variables':['outside_temp_formatted'], 'font':'small', 'just':'right', 'size':(24,16) },
 	'temphilow': { 'type':'text', 'format':'H {0}\nL {1}', 'variables':['outside_temp_max|int', 'outside_temp_min|int'], 'font':'small', 'just':'right', 'size':(25,16) },
 	'temp': { 'type':'text', 'format':'{0}', 'variables':['outside_temp_formatted'], 'font':'large', 'just':'center', 'size':(80,16) },
-	'weather': { 'type':'text', 'format':'{0}', 'variables':['outside_conditions|capitalize'], 'font':'large','varwidth':True, 'effect':('scroll','left',1,1,20,'onloop',3,100)}
+	'weather': { 'type':'text', 'format':'{0}', 'variables':['outside_conditions|capitalize'], 'font':'large','varwidth':True, 'effect':('scroll','left',1,1,20,'onloop',3,100)},
+
+	'debug': { 'type':'text', 'format':'{0}', 'variables':['time_since_last_state_change'], 'font':'large', 'just':'center', 'size':(80,16) },
 }
 
 # Assemble the widgets into canvases.  Only needed if you need to combine multiple widgets together so you can produce effects on them as a group.
@@ -72,22 +74,14 @@ SEQUENCES = [
 		'canvases': [
 			{ 'name':'playing', 'duration':999, 'conditional':'True' }
 		],
-		'conditional': "(dbp['state']=='play' or db['state']=='play') or ( (db['state']=='stop' or db['state']=='pause') and  ((time.time() - db['state_change_time']) < 3) )"
+		'conditional': "db['state']=='play' or ((db['state']=='stop' or db['state']=='pause') and (db['time_since_last_state_change'] < 3))"
 	},
-	# {
-	# 	'name': 'seqDelayAfterPause',
-	# 	'canvases': [
-	# 		{'name': 'playing', 'duration': 999, 'conditional': 'True'}
-	# 	],
-	# 	'conditional': "db['state']=='stop' or db['state']=='pause'",
-	# 	'minimum':2
-	# },
 	{
 		'name': 'screensaver',
 		'canvases': [
 				{ 'name':'screensaver', 'duration':9999}
 		],
-		'conditional': "(db['state']=='stop' or db['state']=='pause') and (dbp['state']=='stop' or dbp['state']=='pause') and ((time.time() - db['state_change_time']) >= 3)"
+		'conditional': "(db['state']=='stop' or db['state']=='pause') and (db['time_since_last_state_change'] >= 3)"
 	},
 	{
 		'name':'seqVolume',
